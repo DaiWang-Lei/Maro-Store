@@ -1,0 +1,16 @@
+@import "./styles/iconfont.wxss";
+
+page,
+view,
+text,
+navigator,
+image {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+page {
+  --themColor: #eb4450;
+  /* 定义统一的字体大小 */
+  font-size: 28rpx;
+}
