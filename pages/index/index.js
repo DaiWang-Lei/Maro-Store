@@ -10,10 +10,10 @@ Page({
     onLoad: function(options) {
         // 1.传统方法，发送ajax请求
         // wx.request({
-        //     url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
+        //     url: '/home/swiperdata',
         //     success: (result) => {
         //         this.setData({
-        //             swiperList: result.data.message
+        //             swiperList: result
         //         })
         //     },
         // });
@@ -28,28 +28,28 @@ Page({
     },
     // 获取轮播图的方法
     getSwiper() {
-        request({ url: "https://api.zbztb.cn/api/public/v1/home/swiperdata" })
+        request({ url: "/home/swiperdata" })
             .then(result => {
                 this.setData({
-                    swiperList: result.data.message
+                    swiperList: result
                 })
             })
     },
     // 获取分类
     getCates() {
-        request({ url: "https://api.zbztb.cn/api/public/v1/home/catitems" })
+        request({ url: "/home/catitems" })
             .then(result => {
                 this.setData({
-                    catesList: result.data.message
+                    catesList: result
                 })
             })
     },
     // 获取楼层
     getFloor() {
-        request({ url: "https://api.zbztb.cn/api/public/v1/home/floordata" })
+        request({ url: "/home/floordata" })
             .then(result => {
                 this.setData({
-                    floorList: result.data.message
+                    floorList: result
                 })
             })
     }
